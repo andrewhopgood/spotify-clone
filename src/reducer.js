@@ -3,6 +3,7 @@ export const initialState = {
   playlists: [],
   playing: false,
   item: null,
+  token: null,
 };
 
 //reducer is an object with values to be tracked
@@ -15,6 +16,12 @@ const reducer = (state, action) => {
       return {
         ...state, //keep items in previous state
         user: action.user, //update the user
+      };
+
+    case "SET_TOKEN":
+      return {
+        ...state,
+        token: action.token,
       };
     default:
       return state;
