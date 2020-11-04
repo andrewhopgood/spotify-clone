@@ -29,6 +29,13 @@ function App() {
           user: user,
         });
       }); //function part of spotify api, gets user account
+
+      spotify.getUserPlaylists().then((playlists) => {
+        dispatch({
+          type: "SET_PLAYLISTS",
+          playlists: playlists,
+        });
+      });
     }
   }, []);
 
