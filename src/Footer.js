@@ -15,7 +15,7 @@ function Footer() {
       <div className="footer__left">
         <img
           className="footer__albumLogo"
-          src="https://upload.wikimedia.org/wikipedia"
+          src="https://upload.wikimedia.org/wikipedia/en/6/60/Pearl_Jam_-_Gigaton.png"
           alt=""
         />
         <div className="footer__songInfo">
