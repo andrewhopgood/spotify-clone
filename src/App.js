@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import "./App.css";
 import Login from "./Login";
 import { getTokenFromUrl } from "./spotify";
@@ -9,7 +9,7 @@ import { useDataLayerValue } from "./DataLayer";
 const spotify = new SpotifyWebApi(); //creating instance inside of app
 
 function App() {
-  const [{ user, token }, dispatch] = useDataLayerValue(); //items in {} are values we pull from data layer
+  const [{ token }, dispatch] = useDataLayerValue(); //items in {} are values we pull from data layer
 
   useEffect(() => {
     const hash = getTokenFromUrl(); // get token from url
@@ -44,7 +44,7 @@ function App() {
         });
       });
     }
-  }, []);
+  }, [dispatch]);
 
   return (
     <div className="app">
